@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage("Build") {
+        stage("SCM") {
             steps{
-                echo "Welcome to Inventory"
+                git branch: 'main',
+                credentialsId: 'github_lara',
+                url: 'https://github.com/larajorge11/lambda-java-davor.git'
             }
         }
     }
