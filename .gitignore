@@ -6,6 +6,8 @@
 .project
 .settings/
 
+.factorypath
+
 # User-specific stuff
 .idea/
 *.iml
