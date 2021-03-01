@@ -8,7 +8,7 @@ import redis.clients.jedis.Jedis;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-import static com.poc.common.CacheConnectionInstance.cacheInstance;
+import static com.common.cache.CacheConnectionInstance.cacheInstance;
 
 public final class CacheData {
 

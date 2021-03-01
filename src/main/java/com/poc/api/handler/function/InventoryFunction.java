@@ -7,16 +7,13 @@ import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyRequestEvent;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.poc.api.handler.model.InventoryRequest;
-import com.poc.api.handler.model.InventoryResponse;
 import io.vavr.control.Option;
-import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.util.Strings;
 import redis.clients.jedis.Jedis;
 
 import java.io.IOException;
-import java.util.Optional;
 
-import static com.poc.common.CacheConnectionInstance.cacheInstance;
+import static com.common.cache.CacheConnectionInstance.cacheInstance;
 
 public class InventoryFunction implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
